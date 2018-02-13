@@ -1,0 +1,20 @@
+CREATE TABLE usuarios_indi
+(
+  email character varying(100) NOT NULL,
+  clave character varying(25) NOT NULL,
+  tipo character varying(5) NOT NULL,
+  nombre character varying(100) NOT NULL,
+  apellido character varying(100) NOT NULL,
+  edad character varying(50) NOT NULL,
+  telefono character varying(50) NOT NULL,
+  fechanac character varying(50) NOT NULL,
+  carrera_estu character varying(85) NOT NULL,
+  cv bytea NOT NULL,
+  CONSTRAINT usuarios_indi_pkey PRIMARY KEY (email)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE usuarios_indi
+  OWNER TO postgres;
+
